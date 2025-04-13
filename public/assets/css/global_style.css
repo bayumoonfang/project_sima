@@ -1,0 +1,130 @@
+
+.form-project {
+    font-family: "Fredoka", serif;
+}
+
+  .alert-danger {
+    position: fixed;bottom: 0px;left:0px;z-index: 99999999999;zoom: 85%;display: none ;
+    background-color: #f8d7da !important;
+    border-color: #f4c2c7 !important;
+  }
+
+  .alert_close {
+    float: right;color: black;margin-left: 40px;opacity: 0.8;margin-top:-3px;font-size: 18px
+  }
+
+  .alert_message {
+    max-width: 500px;min-width: 300px;font-size: 19px;color: black;opacity: 0.9;font-family: 'Nunito', sans-serif;
+  }
+
+
+  .alert-success {
+    position: fixed;bottom: 0px;left:0px;z-index: 99999999999;zoom: 85%;display: none ;
+    background-color: #d1e7dd !important;
+    border-color: #a8d2bf !important;
+  }
+
+  .alert_message_success {
+    max-width: 500px;min-width: 300px;font-size: 19px;color: black;opacity: 0.9;font-family: 'Nunito', sans-serif;
+  }
+
+
+  body:not(.layout-fixed) .main-sidebar {
+    height: 10px !important;
+}
+
+
+.brand-text {
+   font-family: "Nunito", serif;
+    font-size: 26px;
+    font-weight: bold !important;
+}
+
+.user-infoname {
+    font-family: "Fredoka", serif;
+}
+
+.nav-link{
+    font-family: "Fredoka", serif;
+}
+
+
+.form-content {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.dt-layout-row {
+    zoom:90% !important;
+}
+
+div.dt-container div.dt-layout-row div.dt-layout-cell.dt-layout-end {
+    zoom: 90%;
+}
+
+table.dataTable>tbody>tr {
+    background-color: transparent;
+    font-size: 20px;
+     font-family: "Nunito", serif;
+}
+
+.table_link2 {
+    color: #4444f3;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dt-length {
+    display: none !important;
+}
+
+.div-btn-table {
+     margin-bottom: -55px;
+    zoom: 79%;
+    position: absolute;
+    z-index: 1 !important;
+}
+
+.btn-style{
+    font-family: "Nunito", serif;
+}
+
+.nav-link {
+    color:#c2c7d0 !important;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #007bff;
+    color: #fff !important;
+}
+
+  .showbackfull {
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed;
+    right: 0px !important;
+
+  }
+
+  .form-style {
+
+    font-family: "Fredoka", serif;
+  }
+
+  .label-style {
+    font-family: "Nunito", serif;
+  }
+
+  .checkbox-table {
+    transform: scale(1.4);
+  }
+
+  body:not(.layout-fixed) .main-sidebar {
+    height: 100% !important;
+}
+
+
+[class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active, [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:focus, [class*=sidebar-dark-] .nav-treeview>.nav-item>.nav-link.active:hover {
+    background-color: rgba(255, 255, 255, .9);
+    color: #343a40 !important;
+}

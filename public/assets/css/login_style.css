@@ -1,0 +1,16 @@
+.login-logo {
+font-family: "Fredoka", serif;
+}
+.login-box-msg {
+    font-family: "Fredoka", serif;
+}
+
+.login-page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    margin-top: -5%;
+}
