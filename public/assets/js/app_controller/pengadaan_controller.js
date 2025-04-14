@@ -221,7 +221,6 @@ $('#myTable').on('click', 'td.table_link2', function(e) {
                             success : function (response) {
                                 if(response.status == "success") {
                                     render_data();
-                                    clearall_input();
                                     $('.modal').modal('hide');
                                     success_alert(response.message);
                                 } else {
