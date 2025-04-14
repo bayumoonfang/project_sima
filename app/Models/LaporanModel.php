@@ -17,39 +17,39 @@ class LaporanModel extends Model
                 ->join('tb_lokasi', 'tb_lokasi.lokasi_id', '=', 'tb_asset.asset_lokasi')
                 ->join('karyawan', 'karyawan.karyawan_id', '=', 'tb_lokasi.lokasi_penanggungjawab')
                  ->join('pengadaan', 'pengadaan.pengadaan_asset', '=', 'tb_asset.asset_id')
-                ->orderBy('asset_tglbeli', 'DESC')
+                ->orderBy('pengadaan_tglbeli', 'DESC')
                 ->get();
         } else {
                  $getdata = DB::table('tb_asset')
                  ->join('tb_lokasi', 'tb_lokasi.lokasi_id', '=', 'tb_asset.asset_lokasi')
                 ->join('karyawan', 'karyawan.karyawan_id', '=', 'tb_lokasi.lokasi_penanggungjawab')
                                  ->join('pengadaan', 'pengadaan.pengadaan_asset', '=', 'tb_asset.asset_id')
-                ->whereBetween('asset_tglbeli', [$tglfrom, $tglto])
-                ->orderBy('asset_tglbeli', 'DESC')
+                ->whereBetween('pengadaan_tglbeli', [$tglfrom, $tglto])
+                ->orderBy('pengadaan_tglbeli', 'DESC')
                 ->get();
         }
 
 } else {
-    
+
      if($tglfrom == "" || $tglto == "") {
                 $getdata = DB::table('tb_asset')
                 ->join('tb_lokasi', 'tb_lokasi.lokasi_id', '=', 'tb_asset.asset_lokasi')
                 ->join('karyawan', 'karyawan.karyawan_id', '=', 'tb_lokasi.lokasi_penanggungjawab')
                                  ->join('pengadaan', 'pengadaan.pengadaan_asset', '=', 'tb_asset.asset_id')
                 ->where('asset_cabang', Session::get('karyawan_cabang'))
-                ->orderBy('asset_tglbeli', 'DESC')
+                ->orderBy('pengadaan_tglbeli', 'DESC')
                 ->get();
         } else {
                  $getdata = DB::table('tb_asset')
                  ->join('tb_lokasi', 'tb_lokasi.lokasi_id', '=', 'tb_asset.asset_lokasi')
                 ->join('karyawan', 'karyawan.karyawan_id', '=', 'tb_lokasi.lokasi_penanggungjawab')
                                  ->join('pengadaan', 'pengadaan.pengadaan_asset', '=', 'tb_asset.asset_id')
-                ->whereBetween('asset_tglbeli', [$tglfrom, $tglto])
+                ->whereBetween('pengadaan_tglbeli', [$tglfrom, $tglto])
                 ->where('asset_cabang', Session::get('karyawan_cabang'))
-                ->orderBy('asset_tglbeli', 'DESC')
+                ->orderBy('pengadaan_tglbeli', 'DESC')
                 ->get();
         }
-    
+
 }
 
         return $getdata;
@@ -78,7 +78,7 @@ class LaporanModel extends Model
                 ->get();
         }
  } else {
-     
+
         if ($tglfrom == "" || $tglto == "") {
             $getdata = DB::table('peminjaman')
            ->join('tb_asset', 'tb_asset.asset_id', '=', 'peminjaman.pinjam_asset')
@@ -98,7 +98,7 @@ class LaporanModel extends Model
                 ->orderBy('pinjam_tglpinjam', 'DESC')
                 ->get();
         }
-     
+
  }
 
         return $getdata;
